@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ProductModule } from './views/products/product.module';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: true,
+    imports: [
+      RouterOutlet,
+      ProductModule
+    ],
 })
 export class AppComponent {
-  title = 'product_web';
+  title = 'ProductWeb';
 }
